@@ -75,6 +75,13 @@ class DecksDictProxy:
         self._warn()
         return self._col.decks.have(item)
 
+branch_coverage = {
+    "normal_create_deck": False,
+    "repeated_name_deck": False,
+    "is_instance": False,
+    "is_not_instance": False,
+    "include_subdecks": False
+}
 
 class DeckManager(DeprecatedNamesMixin):
     # Registry save/load
@@ -103,8 +110,10 @@ class DeckManager(DeprecatedNamesMixin):
     def add_normal_deck_with_name(self, name: str) -> OpChangesWithId:
         "If deck exists, return existing id."
         if id := self.col.decks.id_for_name(name):
+            branch_coverage["repeated_name_deck"] = True;
             return OpChangesWithId(id=id)
         else:
+            branch_coverage["normal_create_deck"] = True;
             deck = self.col.decks.new_deck()
             deck.name = name
             return self.add_deck(deck)
@@ -226,10 +235,13 @@ class DeckManager(DeprecatedNamesMixin):
     ) -> Any:
         if isinstance(dids, int):
             dids = {dids}
+            branch_coverage["is_instance"] = True
         else:
             dids = set(dids)
+            branch_coverage["is_not_instance"] = True
         if include_subdecks:
             dids.update([child[1] for did in dids for child in self.children(did)])
+            branch_coverage["include_subdecks"] = True
         str_ids = ids2str(dids)
         count = self.col.db.scalar(
             f"select count() from cards where did in {str_ids} or odid in {str_ids}"
