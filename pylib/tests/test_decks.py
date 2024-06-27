@@ -5,6 +5,7 @@
 
 from anki.errors import DeckRenameError
 from tests.shared import assertException, getEmptyCol
+from anki.decks import DeckId, DeckManager, branch_coverage
 
 
 def test_basic():
@@ -89,3 +90,22 @@ def test_rename():
     child = col.decks.get(childId)
     assertException(DeckRenameError, lambda: col.decks.rename(child, "filtered::child"))
     assertException(DeckRenameError, lambda: col.decks.rename(child, "FILTERED::child"))
+
+   
+def test_deck_manager():
+    col = getEmptyCol()
+    deckManager = DeckManager(col)
+    
+    #add deck tests
+    deck1 = deckManager.add_normal_deck_with_name("test") #normal create deck
+    deckManager.add_normal_deck_with_name("test") #repeated name
+    
+    #card count tests
+    assert deckManager.card_count(deck1.id, False) == 0 #normal
+    deckManager.card_count("1", False) #isinstance = false
+    assert deckManager.card_count(deck1.id, True) == 0 #include subdecks
+    
+def test_print_coverage():
+    print()
+    for branch, hit in branch_coverage.items():
+        print(f"{branch} was {'hit' if hit else 'not hit'}")
