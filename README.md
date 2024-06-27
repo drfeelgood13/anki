@@ -6,7 +6,7 @@ Name: Anki
 
 URL: https://github.com/drfeelgood13/anki
 
-Number of lines of code and the tool used to count it: 113.385 LOC, Lizard
+Number of lines of code and the tool used to count it: 35.149 (31% out of 113.385) LOC, Lizard
 
 Programming language: Python
 
@@ -153,7 +153,7 @@ https://github.com/ankitects/anki/commit/16be6169707fe02b991cef26d73e3b64c0f5616
 
 <Provide a screenshot of the old coverage results (the same as you already showed above)>
 
-	![vlad3](https://github.com/drfeelgood13/anki/assets/122294492/5d6e3465-d24d-4f55-80e9-8b857d2bec42)
+![vlad3](https://github.com/drfeelgood13/anki/assets/122294492/5d6e3465-d24d-4f55-80e9-8b857d2bec42)
 
 <Provide a screenshot of the new coverage results>
 	
@@ -163,10 +163,13 @@ https://github.com/ankitects/anki/commit/16be6169707fe02b991cef26d73e3b64c0f5616
 As illustrated by the screenshots above, the coverage improvement increased by 25%. The initial uncovered part was related to the branch reached only when sched_ver() received an incompatible version of the app’s scheduler as input. In this case, the only compatible versions are 1 and 2. Since the first branch was already covered, I wrote a test for the branch that raised an exception. The test simply creates a configuration that has the third version(the only existing one that is incompatible) of the scheduler and calls sched_ver(). More than that, it is built to expect an assertion. If the assertion isn’t raised, then there might be a problem with the code.
 
 <Test 2>
+
 test_browser.py 
 
 <Show a patch (diff) or a link to a commit made in your forked repository that shows the new/enhanced test>
+
 https://github.com/ankitects/anki/commit/a7813812749d55efe6dcdfac6106c64816af8824
+
 <Provide a screenshot of the old coverage results (the same as you already showed above)>
 
 ![vlad5](https://github.com/drfeelgood13/anki/assets/122294492/4997c4e2-e3bd-473a-b659-034ccd7b99d5)
@@ -212,23 +215,27 @@ The function had 0% coverage before. After I added tests for each branch, the co
 Lukas Jokubauskas
 
 <Test 1>
-
+test_tags.py
 <Show a patch (diff) or a link to a commit made in your forked repository that shows the new/enhanced test>
 https://github.com/ankitects/anki/commit/ac9c6ac103117792340892757378ed0a1717c62c
 
 <Provide a screenshot of the old coverage results (the same as you already showed above)>
 
+![lukas45](https://github.com/drfeelgood13/anki/assets/122294492/e813014d-570d-4f2a-ae1d-fee80dcbd69d)
+
 ![lukas3](https://github.com/drfeelgood13/anki/assets/122294492/f6174293-5fa6-46a0-97bc-370d48b1c4ac)
 
 <Provide a screenshot of the new coverage results>
-	
+
+![lukas70](https://github.com/drfeelgood13/anki/assets/122294492/3564603a-bf09-433e-a7ae-0929c395a505)
+
 ![lukas4](https://github.com/drfeelgood13/anki/assets/122294492/22eb8b91-07fb-4694-9fd1-bf085e4d1e18)
 
 <State the coverage improvement with a number and elaborate on why the coverage is improved>
 Coverage improved from 0% to 100%. It has improved because _legacy_bulk_add function takes an array ids and tags and depending on boolean value it either adds multiple tags or removes them and I have tested the function with mock ids and tags both when boolean is true and when it is false and captured whether correct branches are entered in both cases. So all branches are tested now and none were before.
 
 <Test 2>
-<Provide the same kind of information provided for Test 1>
+test_pathcase.py
 
 https://github.com/ankitects/anki/commit/4432cc229aa721831c310e3e4ef19acb300fbbf2
 
@@ -251,6 +258,14 @@ Coverage improved from 0% to 100%. Coverage improved because both statements wer
 ![totalrep4](https://github.com/drfeelgood13/anki/assets/122294492/4dc2aad2-2a75-4507-be56-6f3b97f93f85)
 
 <Provide a screenshot of the new coverage results by running the existing tool using all test modifications made by the group>
+
+![after1](https://github.com/drfeelgood13/anki/assets/122294492/07682f2b-de7c-4183-8a6f-8ed75691a61f)
+
+![after2](https://github.com/drfeelgood13/anki/assets/122294492/3bb9e290-302f-4e00-8569-27a28b766b68)
+
+![after3](https://github.com/drfeelgood13/anki/assets/122294492/b45fe02e-1045-4a79-8f66-ce06a73b1013)
+
+![after4](https://github.com/drfeelgood13/anki/assets/122294492/c68b0659-1c8f-4b83-b5eb-bbe62aaf2053)
 
 ## Statement of individual contributions
 
