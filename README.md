@@ -53,7 +53,7 @@ DeckManager.add_normal_deck_with_name
 
 <Provide a screenshot of the coverage results output by the instrumentation>
 	
-	![rafa2](https://github.com/drfeelgood13/anki/assets/122294492/209031fb-2c27-42ce-beaa-7181f0187462)
+![rafa22](https://github.com/drfeelgood13/anki/assets/122294492/8ee86123-a033-4368-9327-80c3d01bb833)
 
 	
 Vlad Parau
