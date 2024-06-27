@@ -20,9 +20,13 @@ The name of the existing tool we used is “Coverage.py”. We opened the projec
 After we executed the tool, we used the results to identify the poorly tested methods that need to be improved by us.
 
 <Show the coverage results provided by the existing tool with a screenshot>
+	
 ![totalrep1](https://github.com/drfeelgood13/anki/assets/122294492/056c5d64-e5e1-474f-9d55-ada6d4cc1898)
+	
 ![totalrep2](https://github.com/drfeelgood13/anki/assets/122294492/fe36818c-8112-44e7-8b0d-471c333f447f)
+
 ![totalrep3](https://github.com/drfeelgood13/anki/assets/122294492/23f21f03-a613-4479-8251-f7b01b8aa67a)
+
 ![totalrep4](https://github.com/drfeelgood13/anki/assets/122294492/d5900ff3-9129-44ec-aea1-b1ff793d31cd)
 
 ### Your own coverage tool
@@ -30,12 +34,15 @@ After we executed the tool, we used the results to identify the poorly tested me
 Rafael Haenel Musa
 
 <Function 1 name>
+
 	DeckManager.card_count
 
 <Show a patch (diff) or a link to a commit made in your forked repository that shows the instrumented code to gather coverage measurements>
+
 https://github.com/ankitects/anki/compare/main...drfeelgood13:anki:rafael
 
 <Provide a screenshot of the coverage results output by the instrumentation>
+	
 ![rafa1](https://github.com/drfeelgood13/anki/assets/122294492/146bdf38-28aa-4806-96a3-632f0e9632dd)
 
 <Function 2 name>
@@ -45,6 +52,7 @@ DeckManager.add_normal_deck_with_name
 	https://github.com/ankitects/anki/compare/main...drfeelgood13:anki:rafael
 
 <Provide a screenshot of the coverage results output by the instrumentation>
+	
 	![rafa2](https://github.com/drfeelgood13/anki/assets/122294492/ae68b7c8-da58-41e3-b85a-92afbf446cab)
 
 Vlad Parau
@@ -56,6 +64,7 @@ Collection.sched_ver
 https://github.com/ankitects/anki/commit/16be6169707fe02b991cef26d73e3b64c0f5616e
 
 <Provide a screenshot of the coverage results output by the instrumentation>
+	
 ![vlad1](https://github.com/drfeelgood13/anki/assets/122294492/79a214d9-9920-44ba-934f-6072f48619ac)
 
 <Function 2 name>
@@ -65,6 +74,7 @@ BrowserConfig.sort_column_key
 https://github.com/ankitects/anki/commit/a7813812749d55efe6dcdfac6106c64816af8824
 
 <Provide a screenshot of the coverage results output by the instrumentation>
+	
 ![vlad2](https://github.com/drfeelgood13/anki/assets/122294492/09543bbb-69fa-424b-bd23-60aea4eb27a3)
 
 Isabela Aterman
@@ -76,6 +86,7 @@ capitalcase
 https://github.com/drfeelgood13/anki/commit/dd2dc9836b58607cc5d0ba575f772eb337a2050b
 
 <Provide a screenshot of the coverage results output by the instrumentation>
+	
 ![isa1](https://github.com/drfeelgood13/anki/assets/122294492/f5d4fdab-256a-4eec-b51c-284826394baa)
 
 <Function 2 name>
@@ -85,6 +96,7 @@ camelcase
 https://github.com/drfeelgood13/anki/commit/247fbe0d32928b7280e53d7c9eff536d0a39c1b2
 
 <Provide a screenshot of the coverage results output by the instrumentation>
+	
 ![isa2](https://github.com/drfeelgood13/anki/assets/122294492/f1907557-b7a1-45f8-917f-730f2f164707)
 
 Lukas Jokubauskas
@@ -95,6 +107,7 @@ _legacy_bulk_add
 <Show a patch (diff) or a link to a commit made in your forked repository that shows the instrumented code to gather coverage measurements>
 https://github.com/ankitects/anki/commit/ac9c6ac103117792340892757378ed0a1717c62c
 <Provide a screenshot of the coverage results output by the instrumentation>
+
 ![lukas1](https://github.com/drfeelgood13/anki/assets/122294492/dbe376fd-eae0-4f81-bf89-328da101b14d)
 
 <Function 2 name>
@@ -103,6 +116,7 @@ pathcase
 https://github.com/ankitects/anki/commit/4432cc229aa721831c310e3e4ef19acb300fbbf2
 
 <Provide a screenshot of the coverage results output by the instrumentation>
+	
 ![lukas2](https://github.com/drfeelgood13/anki/assets/122294492/87eab88d-0a18-4570-b683-f19f12e172d5)
 
 ## Coverage improvement
@@ -118,9 +132,11 @@ Rafael Hanael Musa
 https://github.com/ankitects/anki/compare/main...drfeelgood13:anki:rafael
 
 <Provide a screenshot of the old coverage results (the same as you already showed above)>
+
 ![rafa3](https://github.com/drfeelgood13/anki/assets/122294492/de8f9bab-f0c3-41aa-941e-ebabb39fad65)
 
 <Provide a screenshot of the new coverage results>
+	
 ![rafa4](https://github.com/drfeelgood13/anki/assets/122294492/4e096b75-70a8-4bdd-9a72-f4b60b5aae69)
 
 <State the coverage improvement with a number and elaborate on why the coverage is improved>
@@ -135,9 +151,11 @@ test_collection.py
 https://github.com/ankitects/anki/commit/16be6169707fe02b991cef26d73e3b64c0f5616e
 
 <Provide a screenshot of the old coverage results (the same as you already showed above)>
+
 	![vlad3](https://github.com/drfeelgood13/anki/assets/122294492/5d6e3465-d24d-4f55-80e9-8b857d2bec42)
 
 <Provide a screenshot of the new coverage results>
+	
 ![vlad4](https://github.com/drfeelgood13/anki/assets/122294492/7f9e8f5d-e5de-4499-a05f-4e98fb763e3e)
 
 <State the coverage improvement with a number and elaborate on why the coverage is improved>
@@ -149,9 +167,11 @@ test_browser.py
 <Show a patch (diff) or a link to a commit made in your forked repository that shows the new/enhanced test>
 https://github.com/ankitects/anki/commit/a7813812749d55efe6dcdfac6106c64816af8824
 <Provide a screenshot of the old coverage results (the same as you already showed above)>
+
 ![vlad5](https://github.com/drfeelgood13/anki/assets/122294492/4997c4e2-e3bd-473a-b659-034ccd7b99d5)
 
 <Provide a screenshot of the new coverage results> 
+	
 ![vlad6](https://github.com/drfeelgood13/anki/assets/122294492/00085ab3-91df-4423-983c-2bd8586c70ba)
 
 <State the coverage improvement with a number and elaborate on why the coverage is improved>
@@ -166,9 +186,11 @@ test_cases.py
 https://github.com/drfeelgood13/anki/commit/dd2dc9836b58607cc5d0ba575f772eb337a2050b
 
 <Provide a screenshot of the old coverage results (the same as you already showed above)>
+
 ![isa3](https://github.com/drfeelgood13/anki/assets/122294492/f94ef272-80c0-49bc-a341-f45fd9d619ce)
 
 <Provide a screenshot of the new coverage results>
+	
 ![isa4](https://github.com/drfeelgood13/anki/assets/122294492/4e79f254-119e-4e06-a9dc-ce5601abd5b6)
 
 <State the coverage improvement with a number and elaborate on why the coverage is improved>
@@ -178,7 +200,9 @@ The coverage of the function went from 0% to 100%. It is improved because now ev
 test_cases.py
 
 https://github.com/drfeelgood13/anki/commit/247fbe0d32928b7280e53d7c9eff536d0a39c1b2
+
 ![isa5](https://github.com/drfeelgood13/anki/assets/122294492/099cbc09-018d-49ba-93b3-df8464410872)
+
 ![isa6](https://github.com/drfeelgood13/anki/assets/122294492/bea2fd48-778d-4256-a212-5c1a38c11a04)
 
 The function had 0% coverage before. After I added tests for each branch, the coverage improved to 100%. The chosen method transforms strings to camel case, unless the input string is empty and it returns immediately. In order to test the branches, I created two asserts which check if the output of the function is as expected. 
@@ -192,9 +216,11 @@ Lukas Jokubauskas
 https://github.com/ankitects/anki/commit/ac9c6ac103117792340892757378ed0a1717c62c
 
 <Provide a screenshot of the old coverage results (the same as you already showed above)>
+
 ![lukas3](https://github.com/drfeelgood13/anki/assets/122294492/f6174293-5fa6-46a0-97bc-370d48b1c4ac)
 
 <Provide a screenshot of the new coverage results>
+	
 ![lukas4](https://github.com/drfeelgood13/anki/assets/122294492/22eb8b91-07fb-4694-9fd1-bf085e4d1e18)
 
 <State the coverage improvement with a number and elaborate on why the coverage is improved>
@@ -202,9 +228,11 @@ Coverage improved from 0% to 100%. It has improved because _legacy_bulk_add func
 
 <Test 2>
 <Provide the same kind of information provided for Test 1>
+
 https://github.com/ankitects/anki/commit/4432cc229aa721831c310e3e4ef19acb300fbbf2
 
 ![lukas5](https://github.com/drfeelgood13/anki/assets/122294492/4ce465bc-8841-4527-bc37-b761c66f9ee1)
+
 ![lukas6](https://github.com/drfeelgood13/anki/assets/122294492/e3b26f80-51c4-443d-a8ec-0882b65c8a0f)
 
 Coverage improved from 0% to 100%. Coverage improved because both statements were tested, when the given string is empty and not empty. When given string is not empty it was successfully converted first to snakecase and the to pathcase which assertions confirm. Previously none of the statements were tested and now all statements are tested.
@@ -212,9 +240,13 @@ Coverage improved from 0% to 100%. Coverage improved because both statements wer
 ### Overall
 
 <Provide a screenshot of the old coverage results by running an existing tool (the same as you already showed above)>
+
 ![totalrep1](https://github.com/drfeelgood13/anki/assets/122294492/19545770-8e5e-4c7f-8a3b-59c82afdca02)
+
 ![totalrep2](https://github.com/drfeelgood13/anki/assets/122294492/92a10b2b-ab0e-4332-a625-1c101e6811a4)
+
 ![totalrep3](https://github.com/drfeelgood13/anki/assets/122294492/408bffb1-d047-4716-9f89-308a49f45bbd)
+
 ![totalrep4](https://github.com/drfeelgood13/anki/assets/122294492/4dc2aad2-2a75-4507-be56-6f3b97f93f85)
 
 <Provide a screenshot of the new coverage results by running the existing tool using all test modifications made by the group>
