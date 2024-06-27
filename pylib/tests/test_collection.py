@@ -4,9 +4,11 @@
 # coding: utf-8
 
 import os
+import unittest
+from unittest.mock import patch, MagicMock
 import tempfile
 from typing import Any
-
+from anki.collection import Collection, BrowserColumns
 from anki.collection import Collection as aopen
 from anki.dbproxy import emulate_named_args
 from anki.lang import TR, without_unicode_isolation
@@ -173,3 +175,20 @@ def test_db_named_args(capsys):
 
     # swallow the warning
     _ = capsys.readouterr()
+
+class SchedulerTest(unittest.TestCase):
+    def setUp(self):
+        self.obj = getEmptyCol() 
+        self.obj._supported_scheduler_versions = [1, 2]
+
+    def test_sched_ver_unsupported_version(self):
+        self.obj.conf["schedVer"] = 3
+        
+        with self.assertRaises(Exception) as context:
+            self.obj.sched_ver()
+        
+        self.assertEqual(str(context.exception), "Unsupported scheduler version")
+
+if __name__ == '__main__':
+    unittest.main()
+
