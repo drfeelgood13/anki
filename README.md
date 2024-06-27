@@ -160,6 +160,7 @@ The coverage improvement increased by 100%. The reason why this happened is beca
 Isabela Aterman
 
 <Test 1>
+test_cases.py
 
 <Show a patch (diff) or a link to a commit made in your forked repository that shows the new/enhanced test>
 https://github.com/drfeelgood13/anki/commit/dd2dc9836b58607cc5d0ba575f772eb337a2050b
@@ -174,16 +175,13 @@ https://github.com/drfeelgood13/anki/commit/dd2dc9836b58607cc5d0ba575f772eb337a2
 The coverage of the function went from 0% to 100%. It is improved because now every branch of the method is covered by tests. The chosen function transforms the first character of a string to uppercase, or returns immediately if the input string is empty.  As mentioned before, the input that can occur is either an empty string, or a non-empty string. Thus, I created two asserts in which I check if the output of the function is as expected or not. 
 
 <Test 2>
+test_cases.py
+
 https://github.com/drfeelgood13/anki/commit/247fbe0d32928b7280e53d7c9eff536d0a39c1b2
+![isa5](https://github.com/drfeelgood13/anki/assets/122294492/099cbc09-018d-49ba-93b3-df8464410872)
+![isa6](https://github.com/drfeelgood13/anki/assets/122294492/bea2fd48-778d-4256-a212-5c1a38c11a04)
 
-
-
-New results:
-
-
-
-
-	The function had 0% coverage before. After I added tests for each branch, the coverage improved to 100%. The chosen method transforms strings to camel case, unless the input string is empty and it returns immediately. In order to test the branches, I created two asserts which check if the output of the function is as expected. 
+The function had 0% coverage before. After I added tests for each branch, the coverage improved to 100%. The chosen method transforms strings to camel case, unless the input string is empty and it returns immediately. In order to test the branches, I created two asserts which check if the output of the function is as expected. 
 
 
 Lukas Jokubauskas
@@ -194,26 +192,30 @@ Lukas Jokubauskas
 https://github.com/ankitects/anki/commit/ac9c6ac103117792340892757378ed0a1717c62c
 
 <Provide a screenshot of the old coverage results (the same as you already showed above)>
+![lukas3](https://github.com/drfeelgood13/anki/assets/122294492/f6174293-5fa6-46a0-97bc-370d48b1c4ac)
 
 <Provide a screenshot of the new coverage results>
-
+![lukas4](https://github.com/drfeelgood13/anki/assets/122294492/22eb8b91-07fb-4694-9fd1-bf085e4d1e18)
 
 <State the coverage improvement with a number and elaborate on why the coverage is improved>
 Coverage improved from 0% to 100%. It has improved because _legacy_bulk_add function takes an array ids and tags and depending on boolean value it either adds multiple tags or removes them and I have tested the function with mock ids and tags both when boolean is true and when it is false and captured whether correct branches are entered in both cases. So all branches are tested now and none were before.
 
 <Test 2>
+<Provide the same kind of information provided for Test 1>
 https://github.com/ankitects/anki/commit/4432cc229aa721831c310e3e4ef19acb300fbbf2
 
-
+![lukas5](https://github.com/drfeelgood13/anki/assets/122294492/4ce465bc-8841-4527-bc37-b761c66f9ee1)
+![lukas6](https://github.com/drfeelgood13/anki/assets/122294492/e3b26f80-51c4-443d-a8ec-0882b65c8a0f)
 
 Coverage improved from 0% to 100%. Coverage improved because both statements were tested, when the given string is empty and not empty. When given string is not empty it was successfully converted first to snakecase and the to pathcase which assertions confirm. Previously none of the statements were tested and now all statements are tested.
-
-<Provide the same kind of information provided for Test 1>
-
 
 ### Overall
 
 <Provide a screenshot of the old coverage results by running an existing tool (the same as you already showed above)>
+![totalrep1](https://github.com/drfeelgood13/anki/assets/122294492/19545770-8e5e-4c7f-8a3b-59c82afdca02)
+![totalrep2](https://github.com/drfeelgood13/anki/assets/122294492/92a10b2b-ab0e-4332-a625-1c101e6811a4)
+![totalrep3](https://github.com/drfeelgood13/anki/assets/122294492/408bffb1-d047-4716-9f89-308a49f45bbd)
+![totalrep4](https://github.com/drfeelgood13/anki/assets/122294492/4dc2aad2-2a75-4507-be56-6f3b97f93f85)
 
 <Provide a screenshot of the new coverage results by running the existing tool using all test modifications made by the group>
 
