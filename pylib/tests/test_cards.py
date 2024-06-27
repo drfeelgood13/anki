@@ -4,7 +4,8 @@
 # coding: utf-8
 
 from tests.shared import getEmptyCol
-
+from anki.cards import Card
+from anki.collection import Collection as aopen
 
 def test_delete():
     col = getEmptyCol()
@@ -93,3 +94,5 @@ def test_gendeck():
     note["Text"] += "{{c4::four}}"
     note.flush()
     assert note.cards()[3].did == newId
+
+

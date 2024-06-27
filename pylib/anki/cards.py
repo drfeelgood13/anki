@@ -172,9 +172,15 @@ class Card(DeprecatedNamesMixin):
     def template(self) -> TemplateDict:
         notetype = self.note_type()
         if notetype["type"] == MODEL_STD:
+            branch_coverage_2["cards.template_1"] = True
             return self.note_type()["tmpls"][self.ord]
         else:
+            branch_coverage_2["cards.template_1"] = True
             return self.note_type()["tmpls"][0]
+    
+    def print_coverage():
+        for branch, hit in branch_coverage_2.items():
+            print(f"{branch} was {'hit' if hit else 'not hit'}")
 
     def start_timer(self) -> None:
         self.timer_started = time.time()
